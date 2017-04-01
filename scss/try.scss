@@ -5,7 +5,9 @@
 	height: 100px;
 	margin: 0 auto;
 	@include clearfix();
-	background-color: #eee;
+	border-bottom: 1px solid #eee;
+
+	
 
 
 	> *{ /* head 底下 第一層 */
@@ -15,7 +17,7 @@
 	}
 
 	.logo{
-		width: 100px;
+		width: 80px;
 
 		img{
 			width: 100%;
@@ -23,15 +25,28 @@
 	}
 
 	.menu{
-		width: calc(100% - 200px);
+		width: calc(100% - 130px);
 		text-align: right;
+		padding-top: 50px;
+
 		a{
 			padding: 5px 15px;
+			text-decoration: none;
+			color: #666;
+
+			&:hover{
+				color:#ff0043;
+			}
 		}
+
 	}
 
 	.user{
-		width: 100px;
-		line-height: 1.5px;
+		width: 40px;
+		height: 40px;
+		border: 1px solid #333;
+		border-radius:100%; 
+		margin-top: 35px;
+		margin-right: 10px;
 	}
 }
