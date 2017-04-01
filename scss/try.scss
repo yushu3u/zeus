@@ -7,7 +7,11 @@
 	@include clearfix();
 	border-bottom: 1px solid #eee;
 
-	@include range-width(500px, 768px){
+	@include range-width(500px, 768px) {
+		height: auto;
+	}
+
+	@include range-width(0, 500px) {
 		height: auto;
 	}
 
@@ -15,6 +19,7 @@
 		max-width: 900px;
 		width: 100%;
 		margin: 0 auto;
+		display: inline-block;
 
 		> *{ /* head 底下 第一層 */
 			float: left;
@@ -24,11 +29,15 @@
 			@include range-width(500px, 768px) {
 				float: none;
 			}
+
+			@include range-width(0, 500px) {
+				float: none;
+			}
 		}
 
 		.logo{
 			width: 80px;
-			border: 1px solid red;
+			/*border: 1px solid red;*/
 
 			img{
 				width: 100%;
@@ -44,7 +53,9 @@
 			}
 
 			@include range-width(0, 500px) {
-				width: 100%;
+				width: 160px;
+				margin: 0 auto;
+				
 			}
 		}
 
@@ -66,21 +77,22 @@
 
 			a{
 				float: right;
-				width: calc(100% / 6);
+				display: inline-block;
 				text-decoration: none;
 				color: #666;
 				text-align: center;
+				padding:0 25px; 
 
-				@include range-width(500px) {
-				width: calc(100% / 6);
-				padding: 15px 0;
-				/*border:1px solid red;*/
+				@include range-width(500px,765px) {
+					width: calc(100% / 6);
+					padding: 15px 0;
+					/*border:1px solid red;*/
 				}
 
 				@include range-width(0, 500px) {
-				width: 100%;
-				padding: 15px 0;
-				/*border:1px solid red;*/
+					width: 100%;
+					padding: 15px 0;
+					/*border:1px solid red;*/
 				}
 
 				&:hover{
