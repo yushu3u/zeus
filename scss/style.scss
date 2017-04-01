@@ -1,22 +1,76 @@
-#head{
-	width:100%;
+@import "_oa";
+
+#nav{
 	display: inline-block;
-	height: 55px;
-	background-color: #eee;
-	> * {
-		display: inline-block;;
-	}
-	.logo{
-		width: 100px;
-		img{
-			width: 
+	width:100%;
+	height: 50px;
+	background-color: #fff;
+	box-shadow: 1px 1px 3px #eee;
+	@include clearfix();
+	position: fixed;
+	
+	.wrapper{
+		width: 100%;
+		max-width: 1000px;
+		@include clearfix();
+		margin: 0 auto;
+
+		> div {
+		display: inline-block;
+		float: left;
+		}
+
+		.logo{
+			width: 50px;
+			
+			img{
+				width: 50px;
+			}
+		}
+
+		.search{
+			width:calc(100% - 100px);
+			padding: 10px;
+
+			input{
+				width: 100%;
+			}
+
+		}
+
+		.user{
+			width: 50px;
+			padding: 5px;
+			img{
+				width: 40px;
+				border-radius: 100%;
+				border: 1px solid #eee;
+
+			}
 		}
 	}
-	.menu{
-		width:calc(100% - 100px - 300px);
+}
 
+#wrapper{
+	display: inline-block;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	@include clearfix();
+	background-image: url(../img/bg.jpg);
+
+	+ *{
+		margin-top: 60px;
 	}
-	.search{
-		width: 300px;
+
+	.main{
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
+
+		p{
+			color:#eee;
+			text-align: left;
+		}
 	}
 }
