@@ -62,7 +62,7 @@
 		.menu{
 			width: calc(100% - 80px);
 			text-align: right;
-			padding-top: 50px;
+			padding-top: 40px;
 			@include clearfix();
 
 			@include range-width(500px, 768px) {
