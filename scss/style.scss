@@ -8,6 +8,10 @@
 	box-shadow: 1px 1px 3px #eee;
 	@include clearfix();
 	position: fixed;
+
+	+ *{
+		margin-top: 55px;
+	}
 	
 	.wrapper{
 		width: 100%;
@@ -59,9 +63,6 @@
 	@include clearfix();
 	background-image: url(../img/bg.jpg);
 
-	+ *{
-		margin-top: 60px;
-	}
 
 	.main{
 		width: 100%;
@@ -71,6 +72,36 @@
 		p{
 			color:#eee;
 			text-align: left;
+		}
+	}
+
+	.pic{
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
+
+		.img_box{
+			display: inline-block;
+			float: left;
+			@include clearfix();
+			width:(100% / 3);
+			height: 300px;
+			overflow: hidden;
+		}
+	}
+
+	.pic2{
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
+
+		.img_box2{
+			display: inline-block;
+			float: left;
+			@include clearfix();
+			width:(100%/3 - 60/3);
+			height: 300px;
+			overflow: hidden;
 		}
 	}
 }
