@@ -1,1 +1,1 @@
-#head{width:100%;margin:0 auto}#head>*{float:left;display:inline-block}#head .logo{width:100px}
+#head{width:100%;height:100px;margin:0 auto;*zoom:1;background-color:#eee}#head:after{display:table;content:"";line-height:0;clear:both}#head>*{float:left;display:inline-block;padding-top:10px}#head .logo{width:100px}#head .logo img{width:100%}#head .menu{width:calc(100% - 200px);text-align:right}#head .menu a{padding:5px 15px}#head .user{width:100px;line-height:1.5px}
