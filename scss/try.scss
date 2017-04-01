@@ -7,46 +7,89 @@
 	@include clearfix();
 	border-bottom: 1px solid #eee;
 
-	
-
-
-	> *{ /* head 底下 第一層 */
-		float: left;
-		display: inline-block;
-		padding-top:10px; 
+	@include range-width(500px, 768px){
+		height: auto;
 	}
 
-	.logo{
-		width: 80px;
+	.wrapper{
+		max-width: 900px;
+		width: 100%;
+		margin: 0 auto;
 
-		img{
-			width: 100%;
-		}
-	}
+		> *{ /* head 底下 第一層 */
+			float: left;
+			display: inline-block;
+			padding-top:10px; 
 
-	.menu{
-		width: calc(100% - 130px);
-		text-align: right;
-		padding-top: 50px;
-
-		a{
-			padding: 5px 15px;
-			text-decoration: none;
-			color: #666;
-
-			&:hover{
-				color:#ff0043;
+			@include range-width(500px, 768px) {
+				float: none;
 			}
 		}
 
+		.logo{
+			width: 80px;
+			border: 1px solid red;
+
+			img{
+				width: 100%;
+			}
+
+			@include range-width(500px, 768px) {
+				width: 160px;
+				margin: 0 auto;
+
+				img{
+					margin:0 auto;
+				}
+			}
+
+			@include range-width(0, 500px) {
+				width: 100%;
+			}
+		}
+
+		.menu{
+			width: calc(100% - 80px);
+			text-align: right;
+			padding-top: 50px;
+			@include clearfix();
+
+			@include range-width(500px, 768px) {
+				width: 100%;
+				padding-top: 0;
+			}
+
+			@include range-width(0, 500px) {
+				width: 100%;
+				padding-top: 0;
+			}
+
+			a{
+				float: right;
+				width: calc(100% / 6);
+				text-decoration: none;
+				color: #666;
+				text-align: center;
+
+				@include range-width(500px) {
+				width: calc(100% / 6);
+				padding: 15px 0;
+				/*border:1px solid red;*/
+				}
+
+				@include range-width(0, 500px) {
+				width: 100%;
+				padding: 15px 0;
+				/*border:1px solid red;*/
+				}
+
+				&:hover{
+					color:#ff0043;
+				}
+			}
+
+		}
 	}
 
-	.user{
-		width: 40px;
-		height: 40px;
-		border: 1px solid #333;
-		border-radius:100%; 
-		margin-top: 35px;
-		margin-right: 10px;
-	}
+	
 }
