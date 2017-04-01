@@ -78,7 +78,10 @@
 	.pic{
 		width: 100%;
 		max-width: 1000px;
-		margin: 0 auto;
+		margin: 0 auto 30px auto;
+		@include clearfix();
+		background-color: #fff;
+		border: 3px solid #fff;
 
 		.img_box{
 			display: inline-block;
@@ -93,7 +96,9 @@
 	.pic2{
 		width: 100%;
 		max-width: 1000px;
-		margin: 0 auto;
+		margin: 0 auto 30px auto;
+		@include clearfix();
+		background-color: #ff0000;
 
 		.img_box2{
 			display: inline-block;
@@ -102,6 +107,28 @@
 			width:(100%/3 - 60/3);
 			height: 300px;
 			overflow: hidden;
+		}
+	}
+
+	.pic3{
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto 30px auto;
+		@include clearfix();
+		background-color: #eee;
+
+		.img_box3{
+			display: inline-block;
+			float: left;
+			@include clearfix();
+			width:(100%/4);
+			height: 300px;
+			margin: 15px 0;
+			overflow: hidden;
+
+			&:nth-child(4n+2){
+				margin-right: 20px;
+			}
 		}
 	}
 }
