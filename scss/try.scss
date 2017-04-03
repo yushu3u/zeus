@@ -7,11 +7,7 @@
 	@include clearfix();
 	border-bottom: 1px solid #eee;
 
-	@include range-width(500px, 768px) {
-		height: auto;
-	}
-
-	@include range-width(0, 500px) {
+	@include range-width(0, 768px) {
 		height: auto;
 	}
 
@@ -25,12 +21,7 @@
 			float: left;
 			display: inline-block;
 			padding-top:10px; 
-
-			@include range-width(500px, 768px) {
-				float: none;
-			}
-
-			@include range-width(0, 500px) {
+			@include range-width(0, 768px) {
 				float: none;
 			}
 		}
